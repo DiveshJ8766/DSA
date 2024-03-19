@@ -9,42 +9,6 @@ int main(){
     cout<<"Enter Number : ";
     cin>>n;
     
-     cout<<"\n\n ------------------- First Solution : ---------------\n\n";
-    for (int i = 0; i < n; i++)
-    {
-
-        for (int j = 0; j < n; j++)
-        {
-
-            if (j < (n - i - 1))
-            {
-                cout << " ";
-            }
-            else
-            {
-                cout << "* ";
-            }
-        }
-        cout << endl;
-    }
-
-    for(int i = 0;i < n;i++){
-        
-        for(int j = 0;j < n;j++){
-            
-            if(j < i){
-                cout<<" ";
-            }else{
-
-                cout<<"* ";
-            }
-            
-        }
-        cout<<endl;
-    }
-    
-    cout<<"\n\n ------------------- Second Solution : ---------------\n\n";
-    
     for (int i = 0; i < n; i++)
     {
 
@@ -56,7 +20,11 @@ int main(){
 
         for (int j = 0; j <= i; j++)
         {
-            cout << "* ";
+            if(j == 0 || j == i){
+                cout<<"* ";
+            }else{
+                cout<<"  ";
+            }
         }
         cout << endl;
     }
@@ -70,7 +38,11 @@ int main(){
         }
         
         for(int j = 0;j < n - i;j++){
-            cout<<"* ";
+            if(j == 0 || j == (n - i-1)){
+                cout<<"* ";
+            }else{
+                cout<<"  ";
+            }
         }
 
         cout<<endl;
